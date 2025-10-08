@@ -1,0 +1,22 @@
+CREATE TABLE rewards (
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    stock_symbol VARCHAR(10) NOT NULL,
+    reward_amount DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE stock_prices (
+    id SERIAL PRIMARY KEY,
+    stock_symbol VARCHAR(10) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    recorded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
