@@ -117,17 +117,6 @@ Key tables:
 - Use a dedicated service for price updates, publish via Kafka.
 - Cache read-heavy endpoints with Redis.
 - Keep `ledger_entries` and `reward_events` immutable for audit.
-
----
-
-## Postman Collection
-Attach the included `postman_collection.json` file in the repository root for testing all endpoints.
-
----
-
-## Collaborator
-Add `ashutosh@021.trade` as a collaborator in your private GitHub repository.
-
 ---
 
 ## License
